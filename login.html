@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - DevClub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./devclub.jpg">
+</head>
+
+<body>
+
+
+    <div class="login-container">
+        <div class="overlay"></div>
+
+        <form class="login-box">
+
+            <h3 class="bvd">Fala Dev! Vamos programar ?</h3>
+            <h2 class="entrar">Entrar</h2>
+
+            <input type="email" placeholder="Seu email">
+            <input type="password" placeholder="Sua senha">
+
+            <button type="button">Entrar</button>
+
+            <a href="#" onclick="mostrarRecuperacao()" class="recuperar-senha">Esqueceu sua senha?</a>
+            <div id="recuperacao" style="display: none;">
+                
+                <input type="email" id="email" placeholder="Digite seu email">
+                
+                <br>
+                <br>
+
+                <button type="button" onclick="enviarEmail()">Enviar</button>
+
+                <p id="mensagem"></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
