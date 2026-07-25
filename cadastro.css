@@ -25,22 +25,19 @@ body{
 
 /* MATRIX */
 
-#matrix{
+#matrix {
+    position: fixed;
+    inset: 0;
 
-    position:fixed;
+    width: 100vw;
+    height: 100vh;
 
-    inset:0;
+    z-index: 0;
 
-    width:100%;
+    filter: blur(2px);
+    opacity: 0.35;
 
-    height:100%;
-
-    z-index:-2;
-
-    filter:blur(4px);
-
-    opacity:.35;
-
+    pointer-events: none;
 }
 
 
@@ -54,6 +51,7 @@ body::after{
     position:fixed;
 
     inset:0;
+    z-index: 1;
 
     background-image:
 
@@ -73,6 +71,8 @@ body::after{
 
     pointer-events:none;
 
+    
+
 }
 
 
@@ -80,18 +80,16 @@ body::after{
 
 .container{
 
-    width:90%;
+    position: relative;
+    z-index: 2;
 
-    max-width:1200px;
+    width: 90%;
+    max-width: 1200px;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:100px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
 }
 
 
@@ -355,8 +353,8 @@ transform:translateX(0);
 
 
 
-    animation:entradaForm 1s ease;
-    transform:translateX(-70px);
+    animation: entradaForm 1s ease forwards;
+    
 
 }
 
