@@ -5,6 +5,10 @@
   font-family: 'Rajdhani', sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body {
   background: #0a0a0a;
   color: white;
@@ -1144,4 +1148,57 @@ left:-40px;
   .btn-seta {
     font-size: 1.5rem;
   }
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+.back-to-top{
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(15,23,42,.9);
+    color: #A2CD48;
+
+    border: 2px solid #A2CD48;
+    border-radius: 50%;
+
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 10px rgba(162,205,72,.6),
+        0 0 25px rgba(162,205,72,.3);
+
+    transition: .35s;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    z-index:999;
+}
+
+.back-to-top.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.back-to-top:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 0 15px rgba(162,205,72,.9),
+        0 0 40px rgba(162,205,72,.5);
+
+    background:#A2CD48;
+    color:#0f172a;
 }
