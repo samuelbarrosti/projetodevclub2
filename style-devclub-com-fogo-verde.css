@@ -412,24 +412,6 @@ footer {
   }
 }
 
-.btn-comecar {
-  display: inline-block;
-  text-decoration: none;
-
-  padding: 12px 28px;   /* tamanho equilibrado */
-  font-size: 30px;      /* padrão moderno */
-  font-weight: 600;
-
-  border-radius: 8px;   /* menos arredondado = mais profissional */
-
-  background: linear-gradient(45deg, #00f0ff, #00ff88);
-  color: #000;
-
-  box-shadow: 0 4px 12px rgba(0, 240, 255, 0.3);
-
-  transition: all 0.3s ease;
-}
-
 p {
   text-align: center;
   font-size: 25px;
@@ -536,15 +518,6 @@ nav a:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* HOVER */
-.btn-comecar:hover {
-   transform: translateY(-2px);
-
-  box-shadow: 
-    0 6px 18px rgba(13, 20, 20, 0.5),
-    0 0 20px rgba(0, 255, 136, 0.4);
 }
 
 
@@ -1019,5 +992,156 @@ left:-40px;
 
   .hero p {
     font-size: 1.05rem;
+  }
+}
+
+/* BOTÃO COMEÇAR AGORA */
+.btn-comecar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  
+
+  padding: 17px 38px;
+
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    #b9e95a 0%,
+    #a2cd48 45%,
+    #6f9c20 100%
+  );
+
+  border: 1px solid rgba(188,255,92,.75);
+  border-radius: 999px;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  overflow: hidden;
+  cursor: pointer;
+  isolation: isolate;
+
+  box-shadow:
+  box-shadow: 0 0 14px rgba(162, 205, 72, 0.75);
+  animation: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+
+  animation: pulsarBotao 2.5s ease-in-out infinite;
+
+  box-shadow:
+    0 0 8px #A2CD48,
+    0 0 9px #A2CD48,
+    0 0 10px #A2CD48,
+    0 0 11px rgba(162,205,72,.6),
+    0 0 12px rgba(162,205,72,.3);
+}
+
+/* remove reflexos extras abaixo do botão */
+.btn-comecar::before,
+.btn-comecar::after {
+  content: none;
+  display: none;
+}
+
+/* luz passando por dentro do botão */
+.btn-brilho {
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 1;
+
+  animation: luzPassando 3s infinite;
+}
+
+/* texto e ícones */
+.btn-icone,
+.btn-texto,
+.btn-seta {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-icone {
+  font-size: 1.5rem;
+}
+
+.btn-seta {
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+/* efeito ao passar o mouse */
+.btn-comecar:hover {
+  transform: translateY(-4px) scale(1.04);
+  filter: brightness(1.08);
+
+  box-shadow:
+    box-shadow: 0 0 22px rgba(162, 205, 72, 0.9);
+}
+
+.btn-comecar:hover .btn-seta {
+  transform: translateX(7px);
+}
+
+.btn-comecar:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+@keyframes luzPassando {
+  0% {
+    left: -120%;
+  }
+
+  45%,
+  100% {
+    left: 180%;
+  }
+}
+
+@keyframes pulsarBotao {
+  
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .btn-comecar {
+    width: auto;
+    max-width: 90%;
+    padding: 15px 25px;
+    gap: 10px;
+
+    font-size: 0.95rem;
+  }
+
+  .btn-icone {
+    font-size: 1.25rem;
+  }
+
+  .btn-seta {
+    font-size: 1.5rem;
   }
 }
