@@ -163,93 +163,6 @@ overflow:hidden;
   text-align: center;
 }
 
-/* CARD DE DEPOIMENTO */
-.card.depoimento {
-  position: relative;
-  overflow: visible;
-  isolation: isolate;
-  transition: 0.4s ease;
-}
-
-/* Mantém o conteúdo acima do fogo */
-.card.depoimento > * {
-  position: relative;
-  z-index: 3;
-}
-
-/* FOGO VERDE */
-
-
-/* Segunda camada do fogo */
-.card.depoimento::after {
-  height: 65px;
-  bottom: -12px;
-  filter: blur(8px);
-  transform: scaleX(0.95);
-}
-
-/* Hover do card */
-.card.depoimento:hover {
-  transform: translateY(-10px) scale(1.02);
-  background: #0f172a;
-  color: white;
-
-  box-shadow:
-    0 0 10px rgba(57, 255, 20, 0.8),
-    0 0 25px rgba(57, 255, 20, 0.5),
-    0 0 45px rgba(0, 255, 136, 0.3);
-}
-
-/* Ativa o fogo */
-.card.depoimento:hover::before {
-  opacity: 1;
-  animation: fogoSubindo 0.7s ease-in-out infinite alternate;
-}
-
-.card.depoimento:hover::after {
-  opacity: 0.7;
-  animation: fogoSubindoFundo 1s ease-in-out infinite alternate;
-}
-
-/* Movimento das chamas */
-@keyframes fogoSubindo {
-  0% {
-    transform: translateY(6px) scaleY(0.7);
-    filter: blur(3px);
-  }
-
-  50% {
-    transform: translateY(-8px) scaleY(1.25);
-    filter: blur(2px);
-  }
-
-  100% {
-    transform: translateY(-18px) scaleY(1.5);
-    filter: blur(4px);
-  }
-}
-
-@keyframes fogoSubindoFundo {
-  0% {
-    transform: translateY(8px) scaleX(0.9) scaleY(0.8);
-  }
-
-  100% {
-    transform: translateY(-22px) scaleX(1.05) scaleY(1.4);
-  }
-}
-
-
-.card.depoimento:hover::before {
-  opacity: 1;
-  animation: fogoVerde 1.3s linear infinite;
-}
-
-.card.depoimento:hover::after {
-  opacity: 0.8;
-  animation: fogoVerde 2s linear infinite reverse;
-}
-
 /* FOOTER */
 footer {
   padding: 20px;
@@ -944,25 +857,6 @@ left:-40px;
     padding: 70px 10px;
   }
 
- .cards {
-  width: min(1200px, 100%);
-  margin: 40px auto 0;
-  padding: 0 20px;
-
-  display: grid;
-  grid-template-columns: repeat(3, minmax(230px, 280px));
-  justify-content: center;
-  align-items: stretch;
-  gap: 25px;
-}
-
-@media (max-width: 950px) {
-  .cards {
-    grid-template-columns: repeat(2, minmax(230px, 280px));
-  }
-}
-
-@media (max-width: 650px) {
   .cards {
     width: 100%;
     max-width: 320px;
@@ -971,183 +865,159 @@ left:-40px;
   }
 }
 
-/* CARD DOS DEPOIMENTOS */
+/* FOGO VERDE */
+
 .card.depoimento {
   position: relative;
   overflow: visible;
   isolation: isolate;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-/* Mantém texto e imagem acima das chamas */
-.card.depoimento > * {
+.card.depoimento > *:not(.fire-particles) {
   position: relative;
   z-index: 3;
 }
 
-/* CHAMAS VERDES SAINDO DAS BORDAS */
-.card.depoimento::before {
-  content: "";
+.fire-particles {
   position: absolute;
-
-  /* Fica ao redor de todas as bordas */
-  inset: -12px;
-
-  border-radius: 22px;
+  inset: -30px;
   pointer-events: none;
-  opacity: 0;
-  z-index: -1;
-
-  background:
-    /* Chamas na borda superior */
-    radial-gradient(
-      ellipse 12px 28px at 10% 12px,
-      #d4ff65 0%,
-      #39ff14 35%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 15px 38px at 28% 15px,
-      #a2cd48 0%,
-      #00ff88 38%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 11px 30px at 48% 12px,
-      #d4ff65 0%,
-      #39ff14 35%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 16px 42px at 68% 16px,
-      #a2cd48 0%,
-      #00ff88 38%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 12px 32px at 88% 12px,
-      #d4ff65 0%,
-      #39ff14 35%,
-      transparent 72%
-    ),
-
-    /* Chamas na borda inferior */
-    radial-gradient(
-      ellipse 13px 34px at 15% calc(100% - 10px),
-      #d4ff65 0%,
-      #39ff14 35%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 16px 42px at 38% calc(100% - 14px),
-      #a2cd48 0%,
-      #00ff88 38%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 12px 30px at 62% calc(100% - 10px),
-      #d4ff65 0%,
-      #39ff14 35%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 15px 40px at 85% calc(100% - 13px),
-      #a2cd48 0%,
-      #00ff88 38%,
-      transparent 72%
-    ),
-
-    /* Chamas nas laterais */
-    radial-gradient(
-      ellipse 30px 14px at 10px 25%,
-      #a2cd48 0%,
-      #39ff14 38%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 38px 16px at 12px 68%,
-      #d4ff65 0%,
-      #00ff88 38%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 32px 14px at calc(100% - 10px) 35%,
-      #a2cd48 0%,
-      #39ff14 38%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 40px 16px at calc(100% - 12px) 75%,
-      #d4ff65 0%,
-      #00ff88 38%,
-      transparent 72%
-    );
-
-  filter: blur(2px);
+  overflow: visible;
+  z-index: 2;
 }
 
-/* Brilho atrás das chamas */
-.card.depoimento::after {
-  content: "";
+.fire-particle {
   position: absolute;
-  inset: -8px;
-  border-radius: 22px;
-  pointer-events: none;
+  display: block;
+
+  width: var(--particle-width);
+  height: var(--particle-height);
+
+  border-radius: 60% 40% 65% 35%;
   opacity: 0;
-  z-index: -2;
+
+  background: radial-gradient(
+    ellipse at 50% 75%,
+    #f1ff9a 0%,
+    #d4ff65 18%,
+    #a2cd48 34%,
+    #39ff14 55%,
+    rgba(0, 255, 136, 0.45) 75%,
+    transparent 100%
+  );
 
   box-shadow:
-    0 0 15px rgba(57, 255, 20, 0.8),
-    0 0 30px rgba(0, 255, 136, 0.5),
-    0 0 50px rgba(162, 205, 72, 0.35);
+    0 0 5px rgba(241, 255, 154, 1),
+    0 0 10px rgba(57, 255, 20, 0.95),
+    0 0 18px rgba(0, 255, 136, 0.75);
 
-  transition: opacity 0.3s ease;
+  animation:
+    chamaDaBorda
+    var(--particle-duration)
+    ease-out
+    forwards;
 }
 
-/* HOVER */
 .card.depoimento:hover {
   transform: translateY(-10px) scale(1.02);
-  background: #0f172a;
-  color: white;
-  box-shadow: none;
+
+  box-shadow:
+    0 0 8px rgba(162, 205, 72, 0.75),
+    0 0 18px rgba(57, 255, 20, 0.45),
+    0 0 32px rgba(0, 255, 136, 0.25);
 }
 
-.card.depoimento:hover::before {
-  opacity: 1;
-  animation: chamasPulando 0.55s ease-in-out infinite alternate;
-}
-
-.card.depoimento:hover::after {
-  opacity: 1;
-  animation: brilhoFogo 0.7s ease-in-out infinite alternate;
-}
-
-/* Movimento sem rotação */
-@keyframes chamasPulando {
+@keyframes chamaDaBorda {
   0% {
-    transform: scale(0.96);
-    filter: blur(3px);
+    opacity: 0;
+
+    transform:
+      translate(0, 0)
+      scale(0.2)
+      rotate(var(--particle-rotation));
+  }
+
+  15% {
+    opacity: 1;
   }
 
   50% {
-    transform: scaleX(1.02) scaleY(1.06);
-    filter: blur(1px);
+    opacity: 0.95;
+
+    transform:
+      translate(
+        var(--particle-middle-x),
+        var(--particle-middle-y)
+      )
+      scale(1)
+      rotate(var(--particle-rotation));
   }
 
   100% {
-    transform: scaleX(0.98) scaleY(1.12);
-    filter: blur(2px);
+    opacity: 0;
+
+    transform:
+      translate(
+        var(--particle-x),
+        var(--particle-y)
+      )
+      scale(0.1)
+      rotate(var(--particle-rotation));
   }
 }
 
-@keyframes brilhoFogo {
-  from {
-    opacity: 0.55;
-    transform: scale(0.98);
+/* TÍTULO E TEXTO DO INÍCIO */
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.hero p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  to {
-    opacity: 1;
-    transform: scale(1.04);
+  .hero h2 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .hero p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+/* CELULARES MUITO PEQUENOS */
+@media (max-width: 380px) {
+  .hero h2 {
+    font-size: 1.9rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
   }
 }
