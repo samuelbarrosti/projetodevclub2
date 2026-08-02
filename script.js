@@ -385,3 +385,48 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+/* CARREGAMENTO SITE */
+
+const preloader = document.getElementById("preloader");
+const batteryLevel = document.querySelector(".battery-level");
+const batteryPercent = document.querySelector(".battery-percent");
+const loaderText = document.querySelector(".loader-text");
+
+if (
+  preloader &&
+  batteryLevel &&
+  batteryPercent &&
+  loaderText
+) {
+  let carga = 0;
+
+  document.body.style.overflow = "hidden";
+
+  const carregamento = setInterval(() => {
+    carga += 1;
+
+    batteryLevel.style.width = `${carga}%`;
+    batteryPercent.textContent = `${carga}%`;
+
+    if (carga >= 40) {
+      loaderText.textContent = "Preparando conteúdos...";
+    }
+
+    if (carga >= 75) {
+      loaderText.textContent = "Quase pronto...";
+    }
+
+    if (carga >= 100) {
+      clearInterval(carregamento);
+
+      preloader.classList.add("complete");
+      loaderText.textContent = "Carregamento concluído!";
+
+      setTimeout(() => {
+        preloader.classList.add("hide");
+        document.body.style.overflow = "";
+      }, 650);
+    }
+  }, 22);
+}

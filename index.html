@@ -1,186 +1,267 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevClub</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projeto conceitual de uma plataforma de ensino em tecnologia, desenvolvido por Samuel Barros." />
+  <title>DevClub | Projeto de Samuel Barros</title>
+  <link rel="stylesheet" href="style-devclub-com-fogo-verde.css" />
+  <link rel="icon" type="image/png" href="./devclub.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
 
-    <link rel="stylesheet" href="style-devclub-com-fogo-verde.css" />
-    <link rel="icon" type="image/png" href="./devclub.jpg" />
 
-    <!-- Fonte moderna -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <a href="#home" class="back-to-top" id="backToTop">
-    &#8679;
-</a>
-  <body>
-    <!-- MENU -->
-    <header>
-      <h1 class="logo">DevClub</h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#historia">História</a>
-        <a href="#sobre">Sobre</a>
-        <a href="login.html" target="_blank" class="btn-login">Login</a>
-      </nav>
-    </header>
+<body>
 
-    <!-- HERO / HOME -->
-    <div id="home" class="hero">
-      <div class="meteors">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+  <!-- CARREGAMENTO SITE -->
+
+<div id="preloader">
+  <div class="loader-content">
+
+    <h1 class="loader-logo">
+      Dev<span>Club</span>
+    </h1>
+
+    <div class="battery-wrapper">
+
+      <div class="battery">
+        <div class="battery-level">
+          <div class="battery-shine"></div>
+        </div>
+
+        <span class="battery-lightning">⚡</span>
+      </div>
+
+      <div class="battery-cap"></div>
+
+    </div>
+
+    <div class="battery-percent">
+      0%
+    </div>
+
+    <p class="loader-text">
+      Carregando plataforma...
+    </p>
+
+  </div>
+</div>
+
+ <header class="site-header">
+  <a class="logo" href="#home">DevClub</a>
+
+  <span class="menu-subtitle">
+    Formação em Tecnologia
+  </span>
+
+  <nav aria-label="Navegação principal">
+    <a href="#home">Home</a>
+    <a href="#cursos">Cursos</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#historia">História</a>
+    <a href="#sobre">Sobre</a>
+
+    <a
+      href="login.html"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-login"
+    >
+      Login
+    </a>
+  </nav>
+</header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="meteors" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
       </div>
 
       <div class="hero-content">
-        <h2>Transforme seu futuro com tecnologia</h2>
-
-        <p>
-          Aprenda programação
-como os desenvolvedores
-mais bem pagos do mercado.
+       
+        <h1>Transforme seu futuro <span>com tecnologia</span></h1>
+        <p class="hero-description">
+          Aprenda programação por meio de uma plataforma moderna,
+          responsiva e focada no desenvolvimento de habilidades práticas.
         </p>
-        <a href="cadastro.html" class="btn-comecar" target="_blank">
-          <span class="btn-brilho"></span>
-
-          <span class="btn-icone">🚀</span>
-
-          <span class="btn-texto">Começar Agora</span>
-
-          <span class="btn-seta">→</span>
-        </a>
-
-        
+        <a href="cadastro.html" class="btn-comecar" target="_blank" rel="noopener noreferrer">
+          <span class="btn-brilho" aria-hidden="true"></span>
+          <span class="btn-icone" aria-hidden="true">🚀</span>
+          <span class="btn-texto">Explorar plataforma</span>
+          <span class="btn-seta" aria-hidden="true">→</span>
         </a>
       </div>
-    </div>
+    </section>
 
-    <!-- CURSOS -->
     <section id="cursos" class="section">
+      <div class="section-heading">
+        <h2>Trilhas de aprendizado</h2>
+        <p>Conheça algumas áreas e tecnologias presentes nesta experiência.</p>
+      </div>
       <div class="cards">
-        <div class="card">
-          <h3>Front-End</h3>
-          <p>HTML, CSS, JavaScript, React e TypeScript</p>
-        </div>
-
-        <div class="card">
-          <h3>Back-End</h3>
-          <p>Node.js, APIs e Banco de Dados</p>
-        </div>
-
-        <div class="card">
-          <h3>UX/UI Design</h3>
-          <p>Experiência e interfaces modernas</p>
-        </div>
-
-        <div class="card">
-          <h3>Desenvolvimento Mobile</h3>
-          <p>React Native</p>
-        </div>
-
-        <div class="card">
-          <h3>Ferramentas e Tecnologias</h3>
-          <p>Git, APIs REST e IA</p>
-        </div>
-
-        <div class="card">
-          <h3>A Plataforma de Ensino</h3>
-          <p>DevClub</p>
-        </div>
+        <article class="card"><h3>Front-End</h3><p>HTML, CSS, JavaScript, React e TypeScript</p></article>
+        <article class="card"><h3>Back-End</h3><p>Node.js, APIs e Banco de Dados</p></article>
+        <article class="card"><h3>UX/UI Design</h3><p>Experiência do usuário e interfaces modernas</p></article>
+        <article class="card"><h3>Desenvolvimento Mobile</h3><p>React Native</p></article>
+        <article class="card"><h3>Ferramentas e Tecnologias</h3><p>Git, APIs REST e Inteligência Artificial</p></article>
+        <article class="card"><h3>Plataforma de Ensino</h3><p>Uma experiência prática e organizada de aprendizado</p></article>
       </div>
     </section>
 
     <section id="depoimentos" class="section dark">
-      <h2>Depoimentos</h2>
-
-      <div class="cards">
-        <div class="card depoimento">
+      <div class="section-heading">
+        <h2>Depoimentos</h2>
+        <p>Exemplos de conteúdo utilizados na composição visual do projeto.</p>
+      </div>
+      <div class="cards cards-depoimentos">
+        <article class="card depoimento">
           <div class="avatars">
-            <img src="https://randomuser.me/api/portraits/men/1.jpg" />
-            <img src="https://randomuser.me/api/portraits/women/2.jpg" />
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Foto ilustrativa de aluno" />
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Foto ilustrativa de aluna" />
           </div>
-          <p>"Consegui meu primeiro emprego como dev em 6 meses!"</p>
-        </div>
-
-        <div class="card depoimento">
+          <p>“Consegui meu primeiro emprego como desenvolvedor em seis meses.”</p>
+        </article>
+        <article class="card depoimento">
           <div class="avatars">
-            <img src="https://randomuser.me/api/portraits/women/4.jpg" />
-            <img src="https://randomuser.me/api/portraits/men/5.jpg" />
+            <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Foto ilustrativa de aluna" />
+            <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Foto ilustrativa de aluno" />
           </div>
-          <p>"Didática incrível, conteúdo direto ao ponto."</p>
-        </div>
-
-        <div class="card depoimento">
+          <p>“Didática clara, prática e com conteúdo direto ao ponto.”</p>
+        </article>
+        <article class="card depoimento">
           <div class="avatars">
-            <img src="https://randomuser.me/api/portraits/women/8.jpg" />
-            <img src="https://randomuser.me/api/portraits/men/9.jpg" />
+            <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Foto ilustrativa de aluna" />
+            <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Foto ilustrativa de aluno" />
           </div>
-          <p>"Hoje trabalho com React graças ao curso!"</p>
-        </div>
+          <p>“Hoje desenvolvo projetos com React graças ao aprendizado.”</p>
+        </article>
       </div>
     </section>
 
-    <!-- HISTÓRIA -->
     <section id="historia" class="section dark">
-      <h2>Nossa História</h2>
-      <p>
-        A DevClub nasceu com o objetivo de democratizar o ensino de tecnologia,
-        formando profissionais preparados para o mercado digital.
-
-        <br />
-        <br />
-
-        A trajetória do DevClub está ligada à própria história de vida de
-        Rodolfo Mori. Nascido na periferia de São Paulo, ele encontrou na
-        educação e na programação uma forma de transformar sua realidade e
-        garantir um futuro melhor para sua família.
-
-        <br />
-        <br />
-
-        Inspirado por essa transformação, ele começou a ensinar seu irmão a
-        programar (que hoje é tech lead) e percebeu que poderia ajudar mais
-        pessoas a mudarem de vida. Após um encontro com um ex-chefe, ele decidiu
-        criar uma escola de programação. O projeto foi lançado originalmente em
-        2020 com o nome de Code Club e, posteriormente, renomeado como DevClub.
-      </p>
+      <div class="section-heading"><h2>Nossa História</h2></div>
+      <div class="text-content">
+        <p>A DevClub nasceu com o objetivo de democratizar o ensino de tecnologia, formando profissionais preparados para o mercado digital.</p>
+        <p>A trajetória está ligada à história de vida de Rodolfo Mori. Nascido na periferia de São Paulo, ele encontrou na educação e na programação uma forma de transformar sua realidade e garantir um futuro melhor para sua família.</p>
+        <p>Inspirado por essa transformação, começou a ensinar seu irmão a programar e percebeu que poderia ajudar mais pessoas. O projeto foi lançado originalmente em 2020 com o nome Code Club e, posteriormente, renomeado como DevClub.</p>
+      </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section">
-      <h2>Sobre Nós</h2>
-      <p class="frase">
-        Somos uma plataforma focada em ensino prático, com projetos reais e foco
-        na empregabilidade.
-      </p>
-    </section>
+<section id="sobre" class="section contato-section">
 
-    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-        alt="WhatsApp"
-      />
-      <span class="tooltip">
-        Ei, futuro programador (a)! Nos chame no WhatsApp e venha estudar
-        conosco!
-      </span>
+  <div class="section-heading">
+    <h2>Entre em contato com o DevClub</h2>
+
+    <p>
+      Acompanhe conteúdos sobre programação, carreira, tecnologia
+      e fique por dentro das novidades da comunidade.
+    </p>
+  </div>
+
+  <div class="social-grid">
+
+    <!-- YOUTUBE -->
+    <a
+      href="https://www.youtube.com/@canaldevclub"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-card youtube"
+      aria-label="Acessar o canal do DevClub no YouTube"
+    >
+      <div class="social-icon">
+        <img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/youtube.svg"
+          alt=""
+        />
+      </div>
+
+      <div class="social-info">
+        <strong>YouTube</strong>
+        <span>Vídeos, aulas e conteúdos sobre programação.</span>
+      </div>
+
+      <span class="social-arrow">→</span>
     </a>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2026 DevClub. Todos os direitos reservados.</p>
-      <p>Desenvolvido por <strong>Samuel Barros</strong>.</p>
-    </footer>
+    <!-- INSTAGRAM -->
+    <a
+      href="https://www.instagram.com/rodolfomorii/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-card instagram"
+      aria-label="Acessar o Instagram do DevClub"
+    >
+      <div class="social-icon">
+        <img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/instagram.svg"
+          alt=""
+        />
+      </div>
 
-    <script src="script.js"></script>
-  </body>
+      <div class="social-info">
+        <strong>Instagram</strong>
+        <span>Novidades, dicas e conteúdos diários.</span>
+      </div>
+
+      <span class="social-arrow">→</span>
+    </a>
+
+    <!-- E-MAIL -->
+    <a
+      href="mailto:contato@devclub.com.br"
+      class="social-card email"
+      aria-label="Enviar um e-mail para o DevClub"
+    >
+      <div class="social-icon email-symbol">
+        @
+      </div>
+
+      <div class="social-info">
+        <strong>E-mail</strong>
+        <span>contato@devclub.com.br</span>
+      </div>
+
+      <span class="social-arrow">→</span>
+    </a>
+
+    <!-- SITE OFICIAL -->
+    <a
+      href="https://www.devclub.com.br/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-card site-oficial"
+      aria-label="Acessar o site oficial do DevClub"
+    >
+      <div class="social-icon site-symbol">
+        &lt;/&gt;
+      </div>
+
+      <div class="social-info">
+        <strong>Site oficial</strong>
+        <span>Conheça as formações e conteúdos do DevClub.</span>
+      </div>
+
+      <span class="social-arrow">→</span>
+    </a>
+
+  </div>
+
+</section>
+
+  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Conversar pelo WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="" />
+    <span class="tooltip">Dúvidas? Fale conosco pelo WhatsApp.</span>
+  </a>
+
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">&#8679;</a>
+
+  <footer>
+    <p>DevClub — Projeto conceitual.</p>
+    <p>Desenvolvido por <strong>Samuel Barros</strong>.</p>
+    <small>© 2026 DevClub</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
