@@ -640,3 +640,36 @@ button:hover{
 
 
 }
+
+.termos-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 18px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #cbd5e1;
+}
+
+.termos-box input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: #a2cd48;
+    flex-shrink: 0;
+}
+
+.termos-box label {
+    cursor: pointer;
+}
+
+.termos-box a {
+    color: #a2cd48;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.termos-box a:hover {
+    text-decoration: underline;
+}

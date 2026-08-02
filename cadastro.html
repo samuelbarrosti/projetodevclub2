@@ -1,160 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="cadastro.css">
-    <link rel="icon" type="image/png" href="./devclub.jpg">
+    <link rel="stylesheet" href="cadastro.css" />
+    <link rel="icon" type="image/png" href="./devclub.jpg" />
     <title>Cadastro</title>
+  </head>
 
-
-
-</head>
-
-<body>
-
-
+  <body>
     <canvas id="matrix"></canvas>
 
-
     <div class="container">
+      <section class="hero">
+        <h1>DEV<span>CLUB</span></h1>
 
-        <section class="hero">
+        <p class="impact">
+          Transforme ideias em código.
+          <br />
+          Construa o futuro da tecnologia.
+        </p>
 
-            <h1>
-                DEV<span>CLUB</span>
-            </h1>
+        <div class="skills">
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            />
 
-            <p class="impact">
-                Transforme ideias em código.
-                <br>
-                Construa o futuro da tecnologia.
-            </p>
+            <span> HTML5 - Estrutura Web </span>
+          </div>
 
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            />
 
-            <div class="skills">
+            <span> CSS3 - Interfaces Modernas </span>
+          </div>
 
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            />
 
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+            <span> JavaScript - Programação </span>
+          </div>
 
-                    <span>
-                        HTML5 - Estrutura Web
-                    </span>
-                </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            />
 
+            <span> React - Aplicações Profissionais </span>
+          </div>
 
+          <div class="skill">
+            <div class="ai-icon">AI</div>
 
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
-
-                    <span>
-                        CSS3 - Interfaces Modernas
-                    </span>
-                </div>
-
-
-
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-
-                    <span>
-                        JavaScript - Programação
-                    </span>
-                </div>
-
-
-
-                <div class="skill">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-
-                    <span>
-                        React - Aplicações Profissionais
-                    </span>
-                </div>
-
-
-
-                <div class="skill">
-
-                    <div class="ai-icon">
-                        AI
-                    </div>
-
-                    <span>
-                        Inteligência Artificial
-                    </span>
-
-                </div>
-
-
-
-            </div>
-
-        </section>
-
-
-
-        <div class="form-box">
-
-            <h2>
-                CRIAR CONTA
-            </h2>
-
-
-            <form action="confirmacao.html" method="GET">
-
-                <div class="input-box">
-
-                    <input type="text" placeholder="Digite seu nome completo" required>
-
-                    <span>Nome completo</span>
-
-                </div>
-
-
-                <div class="input-box">
-
-                    <input type="email" placeholder="Digite seu melhor e-mail" required>
-
-                    <span>E-mail</span>
-
-                </div>
-
-
-                <div class="input-box">
-
-                    <input type="password" placeholder="Crie uma senha segura" required>
-
-                    <span>Senha</span>
-
-                </div>
-
-
-                <button type="submit">
-                    CRIAR CONTA
-                </button>
-
-            </form>
-
+            <span> Inteligência Artificial </span>
+          </div>
         </div>
+      </section>
 
+      <div class="form-box">
+        <h2>CRIAR CONTA</h2>
 
+        <form action="confirmacao.html" method="GET">
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="Digite seu nome completo"
+              required
+            />
+
+            <span>Nome completo</span>
+          </div>
+
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Digite seu melhor e-mail"
+              required
+            />
+
+            <span>E-mail</span>
+          </div>
+
+          <div class="input-box">
+            <input
+              type="text"
+              name="cpf"
+              placeholder="Digite os 11 dígitos do CPF, somente números"
+              maxlength="11"
+              inputmode="numeric"
+              pattern="[0-9]{11}"
+              required
+            />
+
+            <span>CPF</span>
+          </div>
+
+          <div class="termos-box">
+            <input type="checkbox" id="termos" required />
+
+            <label for="termos">
+              Declaro que li e aceito os
+              <a href="termos.html" target="_blank">Termos de Uso</a>
+              e a
+              <a href="privacidade.html" target="_blank"
+                >Política de Privacidade</a
+              >, autorizando o tratamento dos meus dados conforme a LGPD.
+            </label>
+          </div>
+
+          <button type="submit">CRIAR CONTA</button>
+        </form>
+      </div>
     </div>
 
-    
-
-
-
     <script src="cadastro.js"></script>
-
-
-
-
-</body>
-
+  </body>
 </html>
